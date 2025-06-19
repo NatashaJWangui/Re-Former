@@ -3,10 +3,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    # Comment out the old way
-    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
-
-    # Use strong parameters
     @user = User.new(user_params)
 
     if @user.save
